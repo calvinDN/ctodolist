@@ -1,0 +1,90 @@
+****************************************************
+Calvin Nichols  
+To Do List Program - Assignment Three
+Thr 29 Nov 2012 10:13:12 PM EDT
+****************************************************
+
+    Testing of the priority queue ADT
+    - The priority queue ADT will use my dataNode type that I am using in my Todo List Manager.
+
+    INPUT:
+        MENU:
+        - The menu will reject any inupt that is not an integer from 1 to 3.
+        - The buffer for the input is 20 characters so for every multiple of 20 characters extra the menu will print an extra time.
+        - Numbers input as a double "123.123" will not be accepted as input.
+
+        ADD:
+        - The user is expected to follow the instructions printed to the screen and input a line such as "assignment_3 90", which is the activity followed by a string, followed by the priority.
+        - If no priority is entered, it will be made 100 by default.
+        - If extra tokens are added, they will be removed.
+        - If the user adds a non-numerical character in their priority, the priority will be set to 100.
+        - If the user enters a negative priority, the priority will be set to 100.
+
+    PRIORITY QUEUE:
+        Adding
+            - We can see adding is working correctly by adding activities to the list, so I will go ahead and start my todo list.
+
+             <<< Priority Queue Test Program >>>
+            [1] Add
+            [2] Remove
+            [3] Quit
+             > 1
+            Enter an activity and its priority.
+             > watch_starwars 30
+              Current List :
+                 PRIORITY | ACTIVITY
+                       30 | watch_starwars
+            [1] Add
+            [2] Remove
+            [3] Quit
+
+            - We can see it entered correctly, lets add an item with no priority,
+
+            Enter an activity and its priority.
+             > assignment_3_2520
+              Current List :
+                 PRIORITY | ACTIVITY
+                       30 | watch_starwars
+                      100 | assignment_3_2520
+
+            - It was correctly added as 100, lets make sure it is adding in the correct order (I will exclude the menu).
+
+            Enter an activity and its priority.
+             > eat_doritos 1
+             > fight_lions 32
+             > heal_wounds 34
+             > find_crossbow 31
+
+             Current List :
+                PRIORITY | ACTIVITY
+                       1 | eat_doritos
+                      30 | watch_starwars
+                      31 | find_crossbow
+                      32 | fight_lions
+                      34 | heal_wounds
+                     100 | assignment_3_2520
+
+            - Its all in the proper order.
+
+            - Lets make a remove,
+             Current List :
+                PRIORITY | ACTIVITY
+                      30 | watch_starwars
+                      31 | find_crossbow
+                      32 | fight_lions
+                      34 | heal_wounds
+                     100 | assignment_3_2520
+
+            - We have successfully removed "1 | eat_doritos". A few more removes leaves us with:
+             Current List :
+                PRIORITY | ACTIVITY
+                      32 | fight_lions
+                      34 | heal_wounds
+                     100 | assignment_3_2520
+
+            - That worked, now lets remove everything.
+             Current List :
+                PRIORITY | ACTIVITY
+                List is Empty!
+
+            - Enter 3 and we quit the menu.

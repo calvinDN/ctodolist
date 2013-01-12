@@ -1,0 +1,68 @@
+****************************************************
+Calvin Nichols  
+To Do List Program - Assignment Three
+Thr 29 Nov 2012 10:13:12 PM EDT
+****************************************************
+
+    Testing of the balancedTree ADT
+    - For simplicity of testing my tree will only deal with integers.
+
+    INPUT:
+        MENU:
+        - The menu will reject any inupt that is not an integer from 1 to 9.
+        - The buffer for the input is 20 characters so for every multiple of 20 characters extra the menu will print an extra time.
+        - Numbers input as a double "123.123" will not be accepted as input.
+        - min node, max node and get height will segfault if selected on an empty tree.
+
+        ADD:
+        - Positive integers will be accepted only, any strings containing characters will be rejected, newline characters only will be rejected.
+        - If a string is rejected a notice will be printed and you will be returned to the main menu.
+        - Large intergers, around 2^32 will be too large and the resulting integer will be an undefined number.
+        - Negative values will not be accepted.
+
+    TREE:
+
+        Adding
+            - As we go through the testing I will be providing the max node, min node and height so we can see them working as we go along.
+            - We can see that adding to the tree is working by adding some integers to the tree:
+                  Current List :
+                            1
+                            2
+                            3
+            - We can see that numbers are being added, lets ensure they are making something that looks like a tree.
+                        1
+                    2
+                        3
+                    min Node: 1
+                    max Node: 3
+                      Height: 2
+            - Looks good, lets add a few more to one side to check if balancing is working,
+                            1
+                        2
+                            3
+                    4
+                        5
+                            6
+                    min Node: 1
+                    max Node: 6
+                      Height: 3
+            - Lets add some more,
+                            1
+                        2
+                            3
+                    4
+                                5
+                            6
+                                7
+                        8
+                            9
+                               10
+                    min Node: 1
+                    max Node: 10
+                      Height: 4
+            - Looks good and the tree rotations have all been correct as done by hand and verified with the java applet for avl trees at:
+            http://people.ksp.sk/~kuko/bak/
+
+            - We may now remove all the nodes from the list and we will find remove on an empty list will have no effect.
+            - The nodes will be removed in order of the smallest node first.
+            - Enter 9 and we quit the menu.

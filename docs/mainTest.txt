@@ -1,0 +1,41 @@
+****************************************************
+Calvin Nichols  
+To Do List Program - Assignment Three
+Thr 29 Nov 2012 10:13:12 PM EDT
+****************************************************
+
+    Testing of the To Do List Manager
+
+    FILE INPUT:
+        - Note my file input and user add is almost identical so many of the tests are the same.
+
+        - An empty input file will load fine, nothing will be in the queue.
+        - If no priority is entered, it will be made 100 by default.
+        - If extra tokens are added, they will be removed.
+        - If a non-numerical character is in the priority, the priority will be set to 100.
+        - If there is a negative priority, the priority will be set to 100.
+        - The program will read fine if there is an extra newline in the file.
+        - If a number is too large it will be set to 100.
+        - Extra spaces within in the line make no difference.
+
+    USER INPUT:
+        MENU:
+        - The menu will reject any inupt that is not an integer from 1 to 3.
+        - The buffer for the input is 20 characters so for every multiple of 20 characters extra the menu will print an extra time.
+        - Numbers input as a double "123.123" will not be accepted as input.
+
+    FUNCTIONALITY:
+        ADD:
+        - The user is expected to follow the instructions printed to the screen and input a line such as "assignment_3 90", which is the activity followed by a string, followed by the priority.
+        - If no priority is entered, it will be made 100 by default.
+        - If extra tokens are added, they will be removed.
+        - If the user adds a non-numerical character in their priority, the priority will be set to 100.
+        - If the user enters a negative priority, the priority will be set to 100.
+        - If a number is too large it will be set to 100.
+        - Extra spaces within in the line make no difference.
+
+        REMOVE:
+        - remove only deletes the first item in the queue so the only thing to test with it is removing items in order and removing on an empty queue. My program works fine in both cases.
+
+        QUIT:
+        - The program is simply termminated.
