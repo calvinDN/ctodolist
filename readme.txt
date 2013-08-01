@@ -1,6 +1,6 @@
 ****************************************************
 Calvin Nichols  
-To Do List Program - Assignment Three
+To Do List Program
 Thr 29 Nov 2012 10:13:12 PM EDT
 ****************************************************
 
@@ -128,20 +128,3 @@ Known Limitations
     - Comments are very limited in my testing C files.
     - Some functions (minNode, maxNode, getHeight, etc) in my balancedTree.c take in a struct treeNode when a wrapper function taking a Tree may be more appropriate but I did not include these because they are all helper functions that I included in my balancedTree.h only so I could use them in my testing C files.
     - I destroy my tree but there are still memory leaks, I did not do testing on this.
-
-*******************************
-Academic Integrity Pledge
-*******************************
-
-I have exclusive control over this submission via my password.
-By including this file with my submitted files, I certify that:
-
-1) I have read and understood the University policy on academic integrity;
-2) I have completed the Computing with Integrity Tutorial on Moodle; and
-3) I have achieved at least 80% in the Computing with Integrity Self Test.
-
-I assert that this work is my own.
-
-I have appropriately acknowledged any and all material (data, images, ideas or
-words) that I have used, whether directly quoted or paraphrased.  Furthermore,
-I certify that this assignment was prepared by me specifically for this course.
